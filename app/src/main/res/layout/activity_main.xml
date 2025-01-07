@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="-25dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:padding="10dp"
+            android:background="@color/header"
+            android:layout_marginBottom="15dp"
+            >
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/home"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_call_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_add_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/info"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_person_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
