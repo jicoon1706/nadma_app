@@ -47,6 +47,13 @@
                 android:padding="10dp"
                 >
 
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/imageView"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:padding="5dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -165,6 +172,14 @@
                     android:inputType="textCapCharacters"
                     android:hint="Enter Area"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:padding="5dp"
+                >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -173,6 +188,23 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="0dp"
+
+                    />
+
+                <Button
+                    android:id="@+id/btnCamera"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    app:icon="@drawable/camera"
+                    android:onClick="capture_image"
+                    />
+
+            </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"

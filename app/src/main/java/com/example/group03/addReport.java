@@ -1,10 +1,14 @@
 package com.example.group03;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -23,15 +27,20 @@ import java.util.HashMap;
 
 public class addReport extends AppCompatActivity {
 
-    Button btnSave, btnSubmit, btnKembali;
+    Button btnKamera, btnSubmit, btnKembali;
     EditText etDate, etState, etDistrict, etArea, etIssue, etDisaster, etSeverity;
     String date, state, district, area, issue, disaster, severity;
+    ImageView imageView;
+    private static final int CAMERA_REQUEST = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_report);
+
+        btnKamera = (Button) findViewById(R.id.btnCamera);
+        imageView = (ImageView) findViewById(R.id.imageView);
 
         btnSubmit = findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +119,21 @@ public class addReport extends AppCompatActivity {
         });
 
     }
+
+    public void capture_image(View view){
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intent, CAMERA_REQUEST);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            imageView.setImageBitmap(photo);
+        }
+    }
+
 
 
 }
