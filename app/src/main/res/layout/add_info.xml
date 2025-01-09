@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".editReport"
+    tools:context=".addInfo"
     android:background="@color/black"
 
     >
@@ -19,6 +19,7 @@
         >
 
         <Button
+            android:id="@+id/btnKembali"
             android:layout_width="64dp"
             android:layout_height="64dp"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
@@ -85,6 +86,7 @@
 
 
             <EditText
+                android:id="@+id/titleField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Title"
@@ -118,6 +120,7 @@
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/detailsField"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:hint="Enter Article/Details"
@@ -135,7 +138,7 @@
                 android:padding="1dp">
 
                 <Button
-                    android:id="@+id/check_in"
+                    android:id="@+id/btnSave"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Save"
@@ -152,7 +155,7 @@
                     />
 
                 <Button
-                    android:id="@+id/report"
+                    android:id="@+id/btnSubmit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Submit"
@@ -173,4 +176,4 @@
 
 
 
-</RelativeLayout>>
+</RelativeLayout>
