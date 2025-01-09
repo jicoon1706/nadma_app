@@ -12,6 +12,18 @@
     <!-- Horizontal Navbar -->
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:background="@color/deep_red"
+        android:layout_marginBottom="72dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#761515"
         android:orientation="horizontal"
@@ -141,7 +153,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="97dp"
         android:layout_marginEnd="38dp"
-        app:srcCompat="@drawable/youtube" />
+        app:srcCompat="@drawable/banjir" />
 
     <TextView
         android:id="@+id/textView2"
@@ -154,18 +166,19 @@
         android:background="#761515"
         android:textSize="19sp"
         android:gravity="center"
-        android:text="What's Happening Around Me?"
+        android:text="Find Emergency Shelters Nearby?"
         android:textColor="#FFFFFF" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="274dp"
-        android:layout_height="285dp"
+        android:layout_width="356dp"
+        android:layout_height="215dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="75dp"
-        android:layout_marginBottom="80dp"
-        app:srcCompat="@drawable/reminder" />
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="135dp"
+        app:srcCompat="@drawable/location1" />
+
 
 
 </RelativeLayout>
