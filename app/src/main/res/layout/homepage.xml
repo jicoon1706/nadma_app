@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable Content Area -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:textColor="#761515"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <!-- Business Description Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#761515"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Add your business description elements here -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="MalaysiaSafe"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="Access real-time alerts and updates"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="262dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="12dp"
+            android:background="#2F5481"
+            android:padding="5dp"
+            android:text="Laporan Banjir"
+            android:textAlignment="center"
+            android:textColor="#FAF3F3"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:textAlignment="center">
+
+            <ImageButton
+                android:id="@+id/btnsms"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sms" />
+
+            <TextView
+                android:id="@+id/textsms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gua Musang, Kelantan"
+                android:textColor="#FAF3F3"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/textcall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="3 Days Ago"
+                android:background="@color/black"
+                android:textColor="#FAF3F3"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/black"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textmaps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="By Che Mat"
+                android:textColor="#FAF3F3"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="-25dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:padding="10dp"
+            android:background="#761515"
+            android:layout_marginBottom="15dp"
+            >
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/home"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_call_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_add_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/info"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_person_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

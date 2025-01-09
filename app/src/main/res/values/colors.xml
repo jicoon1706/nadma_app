@@ -8,4 +8,5 @@
     <color name="my_button">#2d255e</color>
     <color name="returned">#5B00FF</color>
     <color name="missing">#680024</color>
+    <color name="deep_red">#761515</color>
 </resources>
