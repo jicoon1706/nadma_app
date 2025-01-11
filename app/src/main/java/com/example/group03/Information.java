@@ -33,14 +33,14 @@ public class Information extends AppCompatActivity {
         rv.setLayoutManager(layoutManager);
 
         // Initialize Adapter
-        List<ReportDetails> list = new ArrayList<>();
-        ReportAdapter adapter = new ReportAdapter(Report.this, list);
+        List<InformationDetails> list = new ArrayList<>();
+        InfoAdapter adapter = new InfoAdapter(Information.this, list);
 
         rv.setAdapter(adapter);
 
         //Fetch data from FB and store into list
         FirebaseDatabase db = FirebaseDatabase.getInstance("https://group03-49e49-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = db.getReference("Report");
+        DatabaseReference dbRef = db.getReference("Information");
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -48,13 +48,13 @@ public class Information extends AppCompatActivity {
                 for (DataSnapshot data : snapshot.getChildren()) {
                     // Ensure the required fields are available
 
-                    ReportDetails reportDetails = new ReportDetails();
-                    reportDetails.setIssue(data.child("Details").getValue(String.class));
-                    reportDetails.setState(data.child("Title").getValue(String.class));
-                    reportDetails.setDate(data.child("Date").getValue(String.class));
+                    InformationDetails informationDetails = new InformationDetails();
+                    InformationDetails.setDetails(data.child("Details").getValue(String.class));
+                    InformationDetails.setTitle(data.child("Title").getValue(String.class));
+                    InformationDetails.setDate(data.child("Date").getValue(String.class));
 
                     // Add the student to the list
-                    list.add(reportDetails);
+                    list.add(informationDetails);
 
                 }
                 adapter.notifyDataSetChanged(); // Update the adapter
@@ -63,7 +63,7 @@ public class Information extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(Report.this, "Failed to fetch data from database", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Information.this,  "Failed to fetch data from database", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -73,7 +73,7 @@ public class Information extends AppCompatActivity {
     }
 
     public void add_info(View view) {
-        Intent intent = new Intent(this, addReport.class); // Correct target activity
+        Intent intent = new Intent(this, addInfo.class); // Correct target activity
         startActivity(intent);
     }
 }

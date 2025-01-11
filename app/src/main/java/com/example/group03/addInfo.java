@@ -61,7 +61,7 @@ public class addInfo extends AppCompatActivity {
 
                     //Insert data to firebase
                     FirebaseDatabase myDb = FirebaseDatabase.getInstance("https://group03-49e49-default-rtdb.firebaseio.com/");
-                    DatabaseReference dbRef = myDb.getReference("Information").child(area);
+                    DatabaseReference dbRef = myDb.getReference("Information").child(title);
                     dbRef.setValue(hmInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
