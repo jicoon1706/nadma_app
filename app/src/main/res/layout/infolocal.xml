@@ -24,6 +24,7 @@
             android:layout_weight="1"
             android:backgroundTint="#761515"
             android:text="National"
+            />
 
         <Button
             android:id="@+id/btn_local"

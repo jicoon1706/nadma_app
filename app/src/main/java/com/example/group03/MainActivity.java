@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Report.class); // Correct target activity
         startActivity(intent);
     }
+    public void info_page(View view) {
+        Intent intent = new Intent(this, addInfo.class); // Correct target activity
+        startActivity(intent);
+    }
 
     public void addDepartment_page(View view) {
         Intent intent = new Intent(this, addDepartment.class); // Correct target activity

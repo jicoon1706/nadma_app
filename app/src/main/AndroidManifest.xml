@@ -67,6 +67,9 @@
         <activity
             android:name=".addReport"
             android:exported="false" />
+        <activity
+            android:name=".addInfo"
+            android:exported="false" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".SplashScreen"

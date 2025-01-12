@@ -11,5 +11,6 @@
     <color name="Main_Background">#1e1e1e</color>
     <color name="red">#ea091d</color>
     <color name="call">#00ff4c</color>
+    <color name="deep_red">#F41B1B</color>
 
 </resources>
