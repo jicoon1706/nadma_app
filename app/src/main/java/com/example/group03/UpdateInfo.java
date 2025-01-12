@@ -44,8 +44,8 @@ public class UpdateInfo extends AppCompatActivity {
         c = getIntent().getStringExtra("dataDetails");
 
         // Set text to the update form
-        etDetails = findViewById(R.id.tvDetails);
-        etTitle = findViewById(R.id.tvTitle);
+        etDetails = findViewById(R.id.detailsField);
+        etTitle = findViewById(R.id.titleField);
         etDate = findViewById(R.id.dateField);
 
         etDate.setText(a);
