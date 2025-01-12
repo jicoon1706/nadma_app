@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void profilePage_page(View view) {
-        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        Intent intent = new Intent(this, ProfilePage.class); // Correct target activity
         startActivity(intent);
     }
 
