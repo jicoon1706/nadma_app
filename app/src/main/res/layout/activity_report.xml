@@ -43,9 +43,8 @@
             <Button
                 android:layout_width="60dp"
                 android:layout_height="50dp"
-                app:icon="@drawable/add"
                 android:onClick="add_report"
-                />
+                app:icon="@drawable/add" />
 
         </LinearLayout>
 
