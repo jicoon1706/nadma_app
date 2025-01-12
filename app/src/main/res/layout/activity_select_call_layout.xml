@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:elevation="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white">
+
+  <!-- Container for three TextViews -->
+  <LinearLayout
+      android:id="@+id/leftTexts"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true">
+
+    <!-- First TextView -->
+    <TextView
+        android:id="@+id/tvDepartment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Department:"
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+
+
+
+
+  </LinearLayout>
+
+  <!-- Container for two Buttons -->
+  <LinearLayout
+      android:id="@+id/rightButtons"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true">
+
+    <!-- First Button (Update) -->
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAddress"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:text="Call"
+        android:onClick="emergencyCall_page"
+        android:backgroundTint="@color/call"
+        android:textColor="@color/white" />
+
+
+  </LinearLayout>
+</RelativeLayout>

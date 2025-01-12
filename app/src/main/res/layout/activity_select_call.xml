@@ -8,25 +8,35 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="28dp"
-        >
+        android:background="@color/Main_Background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/titleText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Department"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titleText2"
+            android:layout_marginTop="22dp"
+            android:padding="16dp"
+            tools:listitem="@layout/activity_select_call_layout" />
+
+
+    </RelativeLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -107,12 +117,15 @@
                 />
 
             <Button
-                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_person_24"
+                android:onClick="editProfile_page"
                 android:background="@android:color/transparent"
-                android:onClick="profilePage_page"
-                app:icon="@drawable/baseline_person_24" />
+                />
+
+
 
 
         </LinearLayout>

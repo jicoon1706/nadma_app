@@ -16,15 +16,14 @@
         android:padding="28dp"
         >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Temperature: --°C"
+            android:textSize="24sp"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -107,12 +106,15 @@
                 />
 
             <Button
-                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:background="@android:color/transparent"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_person_24"
                 android:onClick="profilePage_page"
-                app:icon="@drawable/baseline_person_24" />
+                android:background="@android:color/transparent"
+                />
+
+
 
 
         </LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <!-- Red circular gradient -->
+            <ImageButton
+                android:id="@+id/call_background"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/emergency_call"
+                android:contentDescription="Emergency call background"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginBottom="100dp"
+                android:onClick="initiateCall"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                tools:ignore="OnClick" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Need help? Call ASAP"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/btnBackpC"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        app:icon="@drawable/back_icon"
+
+        android:background="@android:color/transparent"
+        />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Emergency Call"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Bottom CardView with buttons -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:padding="10dp"
+            android:background="@color/header"
+            android:layout_marginBottom="15dp">
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/home"
+                android:onClick="report_page"
+                android:background="@android:color/transparent" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_call_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_add_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/info"
+                android:onClick="report_page"
+                android:background="@android:color/transparent" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp" />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_person_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

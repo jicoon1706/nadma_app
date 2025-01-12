@@ -18,8 +18,7 @@ public class ReportDetails {
         this.severity = severity;
     }
 
-    public String getDate() {
-        return date;
+    public String getDate() {return date;
     }
 
     public void setDate(String date) {

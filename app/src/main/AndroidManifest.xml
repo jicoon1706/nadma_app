@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.ambient_temperature"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +22,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Group03"
         tools:targetApi="31">
+        <activity
+            android:name=".temperatureSensor"
+            android:exported="false" />
+        <activity
+            android:name=".selectCallLayout"
+            android:exported="false" />
+        <activity
+            android:name=".selectCall"
+            android:exported="false" />
+        <activity
+            android:name=".emergencyCall"
+            android:exported="false" />
+        <activity
+            android:name=".personalPage"
+            android:exported="false" />
+        <activity
+            android:name=".editProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePage"
+            android:exported="false" />
+        <activity
+            android:name=".department"
+            android:exported="false" />
+        <activity
+            android:name=".rv_departmentLayout"
+            android:exported="false" />
+        <activity
+            android:name=".departmentControl"
+            android:exported="false" />
+        <activity
+            android:name=".addDepartment"
+            android:exported="false" />
         <activity
             android:name=".UpdateReport"
             android:exported="false" />
@@ -35,6 +78,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

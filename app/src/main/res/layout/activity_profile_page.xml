@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="135dp"
+            android:src="@drawable/profile_icon"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:padding="28dp"
+        >
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBackP"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+            app:icon="@drawable/back_icon"
+
+            android:background="@android:color/transparent"
+            />
+
+        <!-- Edit Icon -->
+        <ImageView
+            android:id="@+id/btnEditProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/edit"
+            android:layout_marginLeft="320dp"
+            android:onClick="editProfile_page"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            app:tint="@color/white" />
+
+
+
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/tvLabelUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/profilePicture"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelUsername"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#E0E0E0"
+            android:background="@color/white"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:inputType="textPersonName" />
+
+        <!-- Password -->
+        <TextView
+            android:id="@+id/tvLabelPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/etUsername"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelPassword"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:inputType="textPassword" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/tvLabelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/etPassword"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelEmail"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:inputType="textEmailAddress" />
+
+        <!-- Phone Number -->
+        <TextView
+            android:id="@+id/tvLabelPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/etEmail"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelPhoneNumber"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#E0E0E0"
+            android:background="@color/white"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:inputType="phone" />
+
+        <!-- Address -->
+        <TextView
+            android:id="@+id/tvLabelAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/etPhoneNumber"
+            android:layout_marginTop="16dp" />
+        <EditText
+            android:id="@+id/etUserAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelAddress"
+            android:background="@color/white"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:inputType="textPostalAddress" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="-25dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:padding="10dp"
+            android:background="@color/header"
+            android:layout_marginBottom="15dp"
+            >
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/home"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_call_24"
+                android:onClick="addDepartment_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_add_24"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/info"
+                android:onClick="report_page"
+                android:background="@android:color/transparent"
+                />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+
+                />
+
+            <Button
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                app:icon="@drawable/baseline_person_24"
+                android:onClick="profilePage_page"
+                android:background="@android:color/transparent"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

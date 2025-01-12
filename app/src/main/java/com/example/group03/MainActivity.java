@@ -27,4 +27,32 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void addDepartment_page(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void editProfile_page(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void profilePage_page(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        startActivity(intent);
+    }
+
+
+
+    public void emergencyCall_page(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void departmentControl_page(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        startActivity(intent);
+    }
+
+
 }
