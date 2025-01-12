@@ -30,13 +30,14 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.ViewHolder> {
     @NonNull
     @Override
     public InfoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_edit_report,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.edit_info,parent,false);
         return new InfoAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull InfoAdapter.ViewHolder holder, int position) {
         InformationDetails informationDetails = list.get(position);
+        holder.tvDate.setText("Date: " + informationDetails.getDate());
         holder.tvTitle.setText("Title: " + informationDetails.getTitle());
         holder.tvDetails.setText("Details: " + informationDetails.getDetails());
 
@@ -65,7 +66,6 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.ViewHolder> {
             public void onClick(View v) {
                 //Dapatkan unique id ,then set to null
                 DatabaseReference dbRef = FirebaseDatabase.getInstance("https://group03-49e49-default-rtdb.firebaseio.com/").getReference("Report");
-                dbRef.child(InformationDetails.getTitle()).setValue(null);
                 Toast.makeText(context, "Delete Successful", Toast.LENGTH_SHORT).show();
 
             }
@@ -82,11 +82,12 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView tvDetails, tvTitle;
+        TextView tvDate, tvDetails, tvTitle;
         Button btnKemasKini, btnHapus;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            tvDate = itemView.findViewById(R.id.tvDate);
             tvDetails = itemView.findViewById(R.id.tvDetails);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             btnKemasKini = itemView.findViewById(R.id.btnKemasKini);

@@ -35,14 +35,18 @@ public class addInfo extends AppCompatActivity {
         setContentView(R.layout.add_info);
 
 
+
         btnSubmit = findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
                 //obtain the data from the EditText
                 etDate = findViewById(R.id.dateField);
                 etTitle = findViewById(R.id.titleField);
                 etDetails = findViewById(R.id.detailsField);
+                btnSubmit = findViewById(R.id.btnSubmit);
 
 
                 date = etDate.getText().toString();
@@ -90,18 +94,18 @@ public class addInfo extends AppCompatActivity {
         btnKembali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent
-                Intent i = new Intent(addInfo.this, Report.class);
+
+                Intent i = new Intent(addInfo.this, Information.class);
                 startActivity(i);
 
             }
         });
+        }
 
     }
 
 
 
-}
 
 
-}
+

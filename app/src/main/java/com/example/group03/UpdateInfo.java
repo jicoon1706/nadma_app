@@ -3,6 +3,7 @@ package com.example.group03;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ public class UpdateInfo extends AppCompatActivity {
 
     String a, b, c;
 
-    EditText etDate, etTitle, etDetails;
+    private EditText etDate, etTitle, etDetails;
 
     Button btnSubmit, btnKembali, btnSimpan;
 
@@ -43,8 +44,8 @@ public class UpdateInfo extends AppCompatActivity {
         c = getIntent().getStringExtra("dataDetails");
 
         // Set text to the update form
-        etDetails= findViewById(R.id.detailsField);
-        etTitle = findViewById(R.id.titleField);
+        etDetails = findViewById(R.id.tvDetails);
+        etTitle = findViewById(R.id.tvTitle);
         etDate = findViewById(R.id.dateField);
 
         etDate.setText(a);

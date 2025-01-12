@@ -13,7 +13,8 @@ public class InformationDetails {
         this.details = details;
     }
 
-    public String getDate() {return date;}
+    public String getDate() {
+        return date;}
 
     public void setDate(String date) {
         this.date = date;
@@ -24,6 +25,7 @@ public class InformationDetails {
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 

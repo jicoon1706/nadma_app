@@ -49,9 +49,9 @@ public class Information extends AppCompatActivity {
                     // Ensure the required fields are available
 
                     InformationDetails informationDetails = new InformationDetails();
-                    InformationDetails.setDetails(data.child("Details").getValue(String.class));
-                    InformationDetails.setTitle(data.child("Title").getValue(String.class));
-                    InformationDetails.setDate(data.child("Date").getValue(String.class));
+                    informationDetails.setDetails(data.child("Details").getValue(String.class));
+                    informationDetails.setTitle(data.child("Title").getValue(String.class));
+                    informationDetails.setDate(data.child("Date").getValue(String.class));
 
                     // Add the student to the list
                     list.add(informationDetails);
