@@ -195,7 +195,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp">
+            android:layout_height="390dp">
 
             <TextView
                 android:id="@+id/titleText"
@@ -220,8 +220,110 @@
 
         </RelativeLayout>
 
-
     </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginBottom="-25dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:padding="10dp"
+                android:background="#761515"
+                android:layout_marginBottom="15dp"
+                >
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    app:icon="@drawable/home"
+
+                    android:contentDescription="Home button"
+                    android:background="@android:color/transparent"
+                    />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+
+                    />
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    app:icon="@drawable/baseline_call_24"
+                    android:contentDescription="Call button"
+                    android:onClick="call_page"
+                    android:background="@android:color/transparent"
+                    />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+
+                    />
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    app:icon="@drawable/baseline_add_24"
+                    android:onClick="report_page"
+                    android:contentDescription="Add button"
+                    android:background="@android:color/transparent"
+                    />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+
+                    />
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    app:icon="@drawable/info"
+                    android:contentDescription="Info button"
+
+                    android:background="@android:color/transparent"
+                    />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+
+                    />
+
+                <Button
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+                    app:icon="@drawable/baseline_person_24"
+
+                    android:contentDescription="Home button"
+                    android:background="@android:color/transparent"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
 
 
 </RelativeLayout>

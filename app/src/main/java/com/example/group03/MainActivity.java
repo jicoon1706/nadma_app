@@ -66,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void call_page(View view) {
+        Intent intent = new Intent(this, selectCall.class); // Correct target activity
+        startActivity(intent);
+    }
+
 
 
     public void emergencyCall_page(View view) {
