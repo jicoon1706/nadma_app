@@ -33,9 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#761515"
-            android:text="Local"
-
+            android:text="+"
             android:textColor="@color/white"
+            android:onClick="info_page"
             android:textColorLink="@color/deep_red" />
 
         <Button
