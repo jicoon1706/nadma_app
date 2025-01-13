@@ -36,6 +36,15 @@
             android:name=".emergencyCall"
             android:exported="false" />
         <activity
+            android:name=".infolocal"
+            android:exported="false" />
+        <activity
+            android:name=".infonational"
+            android:exported="false" />
+        <activity
+            android:name=".infonews"
+            android:exported="false" />
+        <activity
             android:name=".personalPage"
             android:exported="false" />
         <activity
