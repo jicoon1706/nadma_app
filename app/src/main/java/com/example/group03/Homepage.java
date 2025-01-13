@@ -16,6 +16,15 @@ public class Homepage extends AppCompatActivity {
     private TextView textSms, textCall, textMaps;
     private Button homeButton, callButton, addButton, infoButton, personButton;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main); // Ensure this matches your layout file name
+
+
+
+    }
+
 
     private void navigateToHome() {
         // Logic for home navigation

@@ -175,6 +175,7 @@
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/home"
                 android:onClick="report_page"
+                android:contentDescription="Home button"
                 android:background="@android:color/transparent"
                 />
 
