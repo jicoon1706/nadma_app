@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void home_page(View view) {
-        Intent intent = new Intent(this, addInfo.class); // Correct target activity
+        Intent intent = new Intent(this, Homepage.class); // Correct target activity
         startActivity(intent);
     }
 
