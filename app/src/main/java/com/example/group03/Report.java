@@ -1,8 +1,16 @@
 package com.example.group03;
 
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -23,13 +31,40 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Report extends AppCompatActivity {
+public class Report extends AppCompatActivity implements SensorEventListener {
+
+    private TextView xTextView, yTextView, zTextView;
+    private SensorManager sensorManager;
+    private Sensor acclerometerSensor;
+    private boolean isAccelormeterSensorAvailable, itIsNotFirstTime = false;
+    private float currentX, currentY, currentZ, lastX, lastY, lastZ;
+    private float xDifference, yDifference, zDifference;
+    private float shakeThreshold = 5f;
+    private Vibrator vibrator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_report);
+
+        xTextView = findViewById(R.id.xTextView);
+        yTextView = findViewById(R.id.yTextView);
+        zTextView = findViewById(R.id.zTextView);
+
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
+        if(sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)!=null)
+        {
+            acclerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+            isAccelormeterSensorAvailable = true;
+        }else{
+            xTextView.setText("Acclerometer sensor is not available");
+            isAccelormeterSensorAvailable = false;
+        }
+
 
         //Initialize RV
         RecyclerView rv = findViewById(R.id.recyclerView);
@@ -84,4 +119,55 @@ public class Report extends AppCompatActivity {
         Intent intent = new Intent(this, addReport.class); // Correct target activity
         startActivity(intent);
     }
+
+    @Override
+    public void onSensorChanged(SensorEvent sensorEvent) {
+        xTextView.setText(sensorEvent.values[0]+" m/s2");
+        yTextView.setText(sensorEvent.values[1]+" m/s2");
+        zTextView.setText(sensorEvent.values[2]+" m/s2");
+
+        currentX = sensorEvent.values[0];
+        currentY = sensorEvent.values[1];
+        currentZ = sensorEvent.values[2];
+
+        if(itIsNotFirstTime)
+        {
+            xDifference = Math.abs(lastX - currentX);
+            yDifference = Math.abs(lastY - currentY);
+            zDifference = Math.abs(lastZ - currentZ);
+
+            if((xDifference > shakeThreshold && yDifference > shakeThreshold) ||
+            (xDifference > shakeThreshold && zDifference > shakeThreshold) ||
+                    (yDifference > shakeThreshold && zDifference > shakeThreshold))
+            {
+                vibrator.vibrate(VibrationEffect.createOneShot(500,VibrationEffect.DEFAULT_AMPLITUDE));
+
+            }
+        }
+
+        lastX = currentX;
+        lastY = currentY;
+        lastZ = currentZ;
+        itIsNotFirstTime = true;
+
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(isAccelormeterSensorAvailable)
+            sensorManager.registerListener(this, acclerometerSensor, SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(this);
+    }
+
 }

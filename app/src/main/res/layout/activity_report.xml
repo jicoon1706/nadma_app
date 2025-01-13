@@ -14,25 +14,23 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="2dp"
-        >
+        android:padding="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/header"
             android:gravity="right"
             android:orientation="horizontal"
-            android:padding="10dp"
-            android:background="@color/header">
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Report"
                 android:textColor="@color/white"
-                android:textStyle="bold"
                 android:textSize="32sp"
-                />
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="80dp"
@@ -51,11 +49,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:gravity="left"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="5dp"
-
             >
 
             <TextView
@@ -66,6 +63,57 @@
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:padding="5dp"
+                >
+                <TextView
+                    android:id="@+id/xTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X Value"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                     />
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="0dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/yTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Y Value"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                     />
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="0dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/zTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Z Valie"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                     />
+
+
+            </LinearLayout>
+
+
+
 
         </LinearLayout>
 
@@ -73,55 +121,50 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:cardCornerRadius="12dp"
             android:layout_marginBottom="20dp"
             app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12dp"
 
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:background="@color/white"
                 android:gravity="left"
-                android:padding="1dp"
-                android:background="@color/white">
+                android:orientation="horizontal"
+                android:padding="1dp">
 
                 <ImageView
-                    android:layout_margin="10dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/water_level"/>
+                    android:layout_margin="10dp"
+                    android:src="@drawable/water_level" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="left"
-                    android:padding="1dp"
                     android:layout_marginTop="5dp"
-                   >
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:padding="1dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Taman Beruas Jaya"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
                         android:textSize="20sp"
-                        />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Level: Normal"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
                         android:textSize="20sp"
-                        />
+                        android:textStyle="bold" />
                 </LinearLayout>
-
-
-
 
 
             </LinearLayout>
@@ -179,7 +222,6 @@
 
 
     </LinearLayout>
-
 
 
 </RelativeLayout>
