@@ -46,8 +46,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void info_layout(View view) {
-        Intent intent = new Intent(this, infoLayout.class); // Correct target activity
+    public void info_news(View view) {
+        Intent intent = new Intent(this, infonews.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void info_local(View view) {
+        Intent intent = new Intent(this, infolocal.class); // Correct target activity
+        startActivity(intent);
+    }
+    public void info_national(View view) {
+        Intent intent = new Intent(this, infonational.class); // Correct target activity
         startActivity(intent);
     }
 
