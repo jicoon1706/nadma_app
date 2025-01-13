@@ -65,7 +65,7 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 //Dapatkan unique id ,then set to null
-                DatabaseReference dbRef = FirebaseDatabase.getInstance("https://group03-49e49-default-rtdb.firebaseio.com/").getReference("Report");
+                DatabaseReference dbRef = FirebaseDatabase.getInstance("https://group03-49e49-default-rtdb.firebaseio.com/").getReference("Information");
                 Toast.makeText(context, "Delete Successful", Toast.LENGTH_SHORT).show();
 
             }
