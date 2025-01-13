@@ -98,7 +98,10 @@ public class addInfo extends AppCompatActivity {
                 Intent i = new Intent(addInfo.this, Information.class);
                 startActivity(i);
 
+
+
             }
+
         });
         }
 

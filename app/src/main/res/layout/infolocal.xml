@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#761515"
+            android:textSize="27dp"
             android:text="+"
             android:textColor="@color/white"
             android:onClick="info_page"

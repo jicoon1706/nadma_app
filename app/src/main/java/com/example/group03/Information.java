@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +24,7 @@ public class Information extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_report);
+        setContentView(R.layout.add_info);
 
         //Initialize RV
         RecyclerView rv = findViewById(R.id.recyclerView);
@@ -49,11 +48,11 @@ public class Information extends AppCompatActivity {
                     // Ensure the required fields are available
 
                     InformationDetails informationDetails = new InformationDetails();
-                    informationDetails.setDetails(data.child("Details").getValue(String.class));
-                    informationDetails.setTitle(data.child("Title").getValue(String.class));
                     informationDetails.setDate(data.child("Date").getValue(String.class));
+                    informationDetails.setTitle(data.child("Title").getValue(String.class));
+                    informationDetails.setDetails(data.child("Details").getValue(String.class));
 
-                    // Add the student to the list
+
                     list.add(informationDetails);
 
                 }
@@ -72,10 +71,6 @@ public class Information extends AppCompatActivity {
 
     }
 
-    public void add_info(View view) {
-        Intent intent = new Intent(this, addInfo.class); // Correct target activity
-        startActivity(intent);
-    }
 }
 
 
