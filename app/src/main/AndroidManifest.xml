@@ -72,6 +72,15 @@
             android:exported="false" />
         <activity android:name=".MainActivity" />
         <activity
+            android:name=".editInfo"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateInfo"
+            android:exported="false" />
+        <activity
+            android:name=".Information"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true"
             android:theme="@style/SplashScreen">

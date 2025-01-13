@@ -16,7 +16,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:background="@color/deep_red"
+        android:background="@color/Main_Background"
         android:layout_marginBottom="72dp"
         android:orientation="vertical">
 
@@ -45,6 +45,7 @@
             android:layout_weight="1"
             android:backgroundTint="#761515"
             android:text="Local"
+            android:onClick="info_page"
             android:textColor="@color/white"
             android:textColorLink="@color/deep_red" />
 
@@ -82,7 +83,8 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
-                android:onClick="report_page"
+                android:onClick="home_page"
+                android:contentDescription="Home button"
                 app:icon="@drawable/home" />
 
             <View
@@ -97,6 +99,7 @@
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
                 android:onClick="report_page"
+                android:contentDescription="call button"
                 app:icon="@drawable/baseline_call_24" />
 
             <View
@@ -110,7 +113,8 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
-                android:onClick="report_page"
+                android:onClick="info_page"
+                android:contentDescription="add_button"
                 app:icon="@drawable/baseline_add_24" />
 
             <View
@@ -139,6 +143,7 @@
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
                 android:onClick="report_page"
+                android:contentDescription="profile_page"
                 app:icon="@drawable/baseline_person_24" />
 
         </LinearLayout>

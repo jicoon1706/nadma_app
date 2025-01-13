@@ -31,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void home_page(View view) {
+        Intent intent = new Intent(this, addInfo.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void info_layout(View view) {
+        Intent intent = new Intent(this, infoLayout.class); // Correct target activity
+        startActivity(intent);
+    }
+
     public void addDepartment_page(View view) {
         Intent intent = new Intent(this, addDepartment.class); // Correct target activity
         startActivity(intent);

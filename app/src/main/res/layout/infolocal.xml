@@ -24,6 +24,7 @@
             android:layout_weight="1"
             android:backgroundTint="#761515"
             android:text="National"
+            android:onClick="info_layout"
             />
 
         <Button
@@ -98,7 +99,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
-                android:onClick="report_page"
+                android:onClick="info_page"
                 app:icon="@drawable/baseline_add_24" />
 
             <View
@@ -112,7 +113,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
-                android:onClick="report_page"
+                android:onClick="info_page"
                 app:icon="@drawable/info" />
 
             <View
