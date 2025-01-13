@@ -13,6 +13,7 @@
         android:required="false" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,6 +24,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Group03"
         tools:targetApi="31">
+        <activity
+            android:name=".info_layout"
+            android:exported="false" />
         <activity
             android:name=".temperatureSensor"
             android:exported="false" />
@@ -100,7 +104,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

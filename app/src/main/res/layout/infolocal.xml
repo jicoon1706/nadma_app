@@ -24,7 +24,7 @@
             android:layout_weight="1"
             android:backgroundTint="#761515"
             android:text="National"
-
+            android:onClick="info_national"
             />
 
         <Button
@@ -34,6 +34,7 @@
             android:layout_weight="1"
             android:backgroundTint="#761515"
             android:text="Local"
+
             android:textColor="@color/white"
             android:textColorLink="@color/deep_red" />
 
