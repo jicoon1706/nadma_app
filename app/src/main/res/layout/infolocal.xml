@@ -114,7 +114,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
-                android:onClick="info_page"
+                android:onClick="info_local"
                 app:icon="@drawable/info" />
 
             <View
