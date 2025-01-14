@@ -1,7 +1,9 @@
 package com.example.group03;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -66,5 +68,10 @@ public class departmentControl extends AppCompatActivity {
                 Toast.makeText(departmentControl.this, "Failed to fetch data from Firebase", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void department_1(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        startActivity(intent);
     }
 }

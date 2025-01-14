@@ -28,11 +28,9 @@ import java.util.HashMap;
 
 public class addDepartment extends AppCompatActivity {
 
-    Button btnAdd1 = findViewById(R.id.btnAdd1),
 
-            //Button event listener
-            btnView1 = findViewById(R.id.btnView1);
     EditText etName, etId, etAddress;
+    Button btnAdd1, btnView1;
 
     String department, Id, address;
 
@@ -43,16 +41,21 @@ public class addDepartment extends AppCompatActivity {
         setContentView(R.layout.activity_add_department);
 
 
+        btnView1 = findViewById(R.id.btnView1);
 
-        btnView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //intent
-                Intent i = new Intent(addDepartment.this, addDepartment.class);
-                startActivity(i);
 
-            }
-        });
+
+//        btnView1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //intent
+//                Intent i = new Intent(addDepartment.this, addDepartment.class);
+//                startActivity(i);
+//
+//            }
+//        });
+
+        btnAdd1 = findViewById(R.id.btnAdd1);
 
         btnAdd1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,10 +67,10 @@ public class addDepartment extends AppCompatActivity {
                 etAddress = findViewById(R.id.etAddress);
 
                 department = etName.getText().toString();
-                Id = etAddress.getText().toString();
-                address = etId.getText().toString();
+                address = etAddress.getText().toString();
+                Id = etId.getText().toString();
 
-                String area = "Department";
+//                String area = "Department";
 
                 // checking field
                 if (department.isEmpty() || Id.isEmpty() || address.isEmpty()){
@@ -84,7 +87,7 @@ public class addDepartment extends AppCompatActivity {
 
                     // insert data to firebase
                     FirebaseDatabase myDb = FirebaseDatabase.getInstance("https://group03-49e49-default-rtdb.firebaseio.com/");
-                    DatabaseReference dbRef = myDb.getReference("DepartmentInfo").child(Id);
+                    DatabaseReference dbRef = myDb.getReference("DepartmentInfo").child(department);
                     dbRef.setValue(hmInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -109,8 +112,8 @@ public class addDepartment extends AppCompatActivity {
 
     }
 
-    public void departmentControl_page(View view) {
-        Intent intent = new Intent(this, ProfilePage.class); // Correct target activity
+    public void viewDepartment(View view) {
+        Intent intent = new Intent(this, departmentControl.class); // Correct target activity
         startActivity(intent);
     }
 }

@@ -97,7 +97,7 @@
             android:textSize="16sp"
             android:backgroundTint="@color/black"
             android:textColor="@color/white"
-            android:onClick="departmentControl"
+            android:onClick="viewDepartment"
             android:padding="12dp" />
 
     </LinearLayout>

@@ -130,6 +130,21 @@ public class Report extends AppCompatActivity implements SensorEventListener {
         startActivity(intent);
     }
 
+    public void home_page(View view) {
+        Intent intent = new Intent(this, Homepage.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void info_page(View view) {
+        Intent intent = new Intent(this, addInfo.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void personal_page(View view) {
+        Intent intent = new Intent(this, personalPage.class); // Correct target activity
+        startActivity(intent);
+    }
+
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         xTextView.setText(sensorEvent.values[0]+" m/s2");
