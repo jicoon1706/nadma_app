@@ -12,13 +12,93 @@
     <!-- Horizontal Navbar -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="309dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:background="@color/Main_Background"
         android:layout_marginBottom="72dp"
+        android:background="@color/white"
         android:orientation="vertical">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:elevation="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white">
+
+            <!-- Container for three TextViews -->
+            <LinearLayout
+                android:id="@+id/leftTexts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <!-- First TextView -->
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <!-- Second TextView -->
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Date"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <!-- Third TextView -->
+                <TextView
+                    android:id="@+id/tvDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Information"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Container for two Buttons -->
+            <LinearLayout
+                android:id="@+id/rightButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <!-- First Button (Update) -->
+
+                <!-- Second Button (Delete) -->
+                <Button
+                    android:id="@+id/btnKemasKini"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#2F5481"
+                    android:text="Update"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnHapus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:backgroundTint="@color/header"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+
 
     </LinearLayout>
 
@@ -130,7 +210,8 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
-                android:onClick="report_page"
+                android:onClick="info_news"
+                android:contentDescription="Info_button"
                 app:icon="@drawable/info" />
 
             <View
@@ -176,17 +257,6 @@
         android:gravity="center"
         android:text="Find Emergency Shelters Nearby?"
         android:textColor="#FFFFFF" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="356dp"
-        android:layout_height="215dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="135dp"
-        app:srcCompat="@drawable/location1" />
-
 
 
 </RelativeLayout>
