@@ -28,10 +28,9 @@ import java.util.HashMap;
 
 public class addDepartment extends AppCompatActivity {
 
-    Button btnAdd1 = findViewById(R.id.btnAdd1),
+    Button btnAdd1 = findViewById(R.id.btnAdd1);
 
             //Button event listener
-            btnView1 = findViewById(R.id.btnView1);
     EditText etName, etId, etAddress;
 
     String department, Id, address;
@@ -42,22 +41,10 @@ public class addDepartment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_department);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
 
-        btnView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //intent
-                Intent i = new Intent(addDepartment.this, addDepartment.class);
-                startActivity(i);
 
-            }
-        });
+
 
         btnAdd1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,4 +100,9 @@ public class addDepartment extends AppCompatActivity {
         });
 
     }
+    public void departmentControl(View view) {
+        Intent intent = new Intent(this, departmentControl.class); // Correct target activity
+        startActivity(intent);
+    }
+
 }
