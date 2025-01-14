@@ -104,5 +104,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void call_page1(View view) {
+        Intent intent = new Intent(this, selectCall.class); // Correct target activity
+        startActivity(intent);
+    }
+
+
 
 }

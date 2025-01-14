@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".MainActivity">
+    tools:context=".department">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:layout_below="@id/titleText"
                 android:layout_marginTop="22dp"
                 android:padding="16dp"
-                tools:listitem="@layout/rv_item_layout_department" />
+                tools:listitem="@layout/activity_rv_department_layout" />
 
         </RelativeLayout>
     </LinearLayout>
