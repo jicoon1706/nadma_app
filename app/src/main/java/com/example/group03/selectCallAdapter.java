@@ -32,6 +32,8 @@ public class selectCallAdapter extends RecyclerView.Adapter<selectCallAdapter.Vi
         return new ViewHolder(view);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // Get the current department details
@@ -55,12 +57,15 @@ public class selectCallAdapter extends RecyclerView.Adapter<selectCallAdapter.Vi
                 context.startActivity(intent);
             }
         });
+
     }
 
     @Override
     public int getItemCount() {
         return list.size();
     }
+
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         // Declare views
@@ -74,5 +79,19 @@ public class selectCallAdapter extends RecyclerView.Adapter<selectCallAdapter.Vi
             tvDepartment = itemView.findViewById(R.id.tvDepartment);
             btnCall = itemView.findViewById(R.id.btnCall);
         }
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
 }
+

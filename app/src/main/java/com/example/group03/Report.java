@@ -115,8 +115,33 @@ public class Report extends AppCompatActivity implements SensorEventListener {
 
     }
 
+    public void report_page(View view) {
+        Intent intent = new Intent(this, Report.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void call_page(View view) {
+        Intent intent = new Intent(this, selectCall.class); // Correct target activity
+        startActivity(intent);
+    }
+
     public void add_report(View view) {
         Intent intent = new Intent(this, addReport.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void home_page(View view) {
+        Intent intent = new Intent(this, Homepage.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void info_page(View view) {
+        Intent intent = new Intent(this, addInfo.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void personal_page(View view) {
+        Intent intent = new Intent(this, personalPage.class); // Correct target activity
         startActivity(intent);
     }
 

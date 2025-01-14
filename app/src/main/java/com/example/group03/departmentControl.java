@@ -1,7 +1,9 @@
 package com.example.group03;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -30,11 +32,7 @@ public class departmentControl extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_department_control);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
 
         //initialize RV
         RecyclerView rv = findViewById(R.id.rv);
@@ -70,5 +68,15 @@ public class departmentControl extends AppCompatActivity {
                 Toast.makeText(departmentControl.this, "Failed to fetch data from Firebase", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void department_1(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void home_page(View view) {
+        Intent intent = new Intent(this, Homepage.class); // Correct target activity
+        startActivity(intent);
     }
 }

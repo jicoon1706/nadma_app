@@ -1,6 +1,9 @@
 package com.example.group03;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -34,19 +37,18 @@ public class selectCall extends AppCompatActivity {
             return insets;
         });
 
-        //initialize RV
+        // Initialize RecyclerView
         RecyclerView rv = findViewById(R.id.rv);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         rv.setLayoutManager(layoutManager);
 
-        //Initialize Adapter
+        // Initialize Adapter
         List<DepartmentDetails> list = new ArrayList<>();
         selectCallAdapter adapter = new selectCallAdapter(selectCall.this, list); // Pass the list
         rv.setAdapter(adapter);
 
-
         FirebaseDatabase db = FirebaseDatabase.getInstance("https://group03-49e49-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = db.getReference("DepartmentInfo");
+        DatabaseReference dbRef = db.getReference("Call");
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -55,6 +57,8 @@ public class selectCall extends AppCompatActivity {
                     selectCallDetails selectCallDetails = new selectCallDetails();
                     selectCallDetails.setDepartment((String) data.child("departmentId").getValue());
 
+                    Intent i = new Intent(selectCall.this, emergencyCall.class);
+                    startActivity(i);
 
                     list.add(selectCallDetails);
                 }
@@ -66,5 +70,11 @@ public class selectCall extends AppCompatActivity {
                 Toast.makeText(selectCall.this, "Failed to fetch data from Firebase", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+    }
+    public void department_1(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
+        startActivity(intent);
     }
 }
