@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Profile"
-            android:onClick="profile"
+            android:onClick="profile1"
             android:textSize="16sp"
             android:backgroundTint="@color/white"
             android:textColor="#000000"
@@ -147,7 +147,6 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_call_24"
-                android:onClick="addDepartment_page"
                 android:background="@android:color/transparent"
                 />
 
@@ -162,7 +161,6 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_add_24"
-                android:onClick="report_page"
                 android:background="@android:color/transparent"
                 />
 
@@ -177,7 +175,6 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/info"
-                android:onClick="report_page"
                 android:background="@android:color/transparent"
                 />
 
@@ -192,7 +189,6 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_person_24"
-                android:onClick="profilePage_page"
                 android:background="@android:color/transparent"
                 />
 

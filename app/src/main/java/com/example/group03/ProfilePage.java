@@ -59,10 +59,7 @@ public class ProfilePage extends AppCompatActivity {
         btnEditProfile.setOnClickListener(view -> saveUserProfile());
     }
 
-    public void editProfile(View view) {
-        Intent intent = new Intent(this, editProfile.class); // Correct target activity
-        startActivity(intent);
-    }
+
     private void loadUserProfile() {
         databaseReference.child("Password").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -134,5 +131,10 @@ public class ProfilePage extends AppCompatActivity {
             this.phoneNumber = phoneNumber;
             this.address = address;
         }
+    }
+
+    public void editProfile(View view) {
+        Intent intent = new Intent(this, editProfile.class); // Correct target activity
+        startActivity(intent);
     }
 }

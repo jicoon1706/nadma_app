@@ -94,13 +94,7 @@ public class editProfile extends AppCompatActivity {
             }
         });
 
-        btnBackP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(editProfile.this, department.class));
-                finish();
-            }
-        });
+
     }
 
     public void profile (View view) {
