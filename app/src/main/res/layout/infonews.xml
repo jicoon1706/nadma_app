@@ -185,7 +185,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="77dp">
+        android:layout_marginBottom="77dp"/>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -205,7 +205,6 @@
 
         </RelativeLayout>
 
-    </FrameLayout>
 
 
-</RelativeLayout>
+
