@@ -24,6 +24,7 @@
             android:layout_height="64dp"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
             app:icon="@drawable/back_icon"
+            android:onClick="info_national"
             android:contentDescription="Back Button"
             android:background="@android:color/transparent"
             />

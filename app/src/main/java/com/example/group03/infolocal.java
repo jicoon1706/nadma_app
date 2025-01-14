@@ -13,10 +13,6 @@ public class infolocal extends AppCompatActivity {
         setContentView(R.layout.infolocal);
     }
 
-    public void addinfo(View view) {
-        Intent intent = new Intent(this, addInfo.class); // Correct target activity
-        startActivity(intent);
-    }
 
     public void info_national(View view) {
         Intent intent = new Intent(this, infonational.class); // Correct target activity

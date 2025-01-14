@@ -36,6 +36,7 @@ public class addInfo extends AppCompatActivity {
 
 
 
+
         btnSubmit = findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
 
@@ -47,6 +48,7 @@ public class addInfo extends AppCompatActivity {
                 etTitle = findViewById(R.id.titleField);
                 etDetails = findViewById(R.id.detailsField);
                 btnSubmit = findViewById(R.id.btnSubmit);
+
 
 
                 date = etDate.getText().toString();
@@ -97,13 +99,17 @@ public class addInfo extends AppCompatActivity {
 
                 Intent i = new Intent(addInfo.this, Information.class);
                 startActivity(i);
-
-
-
             }
 
+
         });
+
         }
+
+    public void info_national(View view) {
+        Intent intent = new Intent(this, infonational.class); // Correct target activity
+        startActivity(intent);
+    }
 
     }
 
