@@ -75,40 +75,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void call_page(View view) {
-        Intent intent = new Intent(this, departmentControl.class); // Correct target activity
-        startActivity(intent);
-    }
 
 
-
-    public void emergency_page(View view) {
-        Intent intent = new Intent(this, emergencyCall.class); // Correct target activity
-        startActivity(intent);
-    }
-
-
-
-    public void call_page_1(View view) {
-        Intent intent = new Intent(this, selectCall.class); // Correct target activity
-        startActivity(intent);
-    }
-
-    public void department_page(View view) {
+    public void emergencyCall_page(View view) {
         Intent intent = new Intent(this, addDepartment.class); // Correct target activity
         startActivity(intent);
     }
 
-    public void personal_page(View view) {
-        Intent intent = new Intent(this, personalPage.class); // Correct target activity
+    public void departmentControl_page(View view) {
+        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
         startActivity(intent);
     }
-
-    public void call_page1(View view) {
-        Intent intent = new Intent(this, selectCall.class); // Correct target activity
-        startActivity(intent);
-    }
-
 
 
 }

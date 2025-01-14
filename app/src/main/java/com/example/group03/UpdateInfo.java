@@ -21,22 +21,19 @@ import java.util.HashMap;
 
 public class UpdateInfo extends AppCompatActivity {
 
+    Button btnSubmit , btnKembali;
+    EditText etDate, etTitle, etDetails;
+    String date, title, details;
+
     String a, b, c;
 
-    private EditText etDate, etTitle, etDetails;
-
-    Button btnSubmit, btnKembali, btnSimpan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.update_info);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
 
         //Receive data from intent
         a = getIntent().getStringExtra("dataDate");
@@ -91,7 +88,11 @@ public class UpdateInfo extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(UpdateInfo.this, Information.class));
             }
+
+
+
         });
+
 
 
     }
