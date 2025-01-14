@@ -47,14 +47,14 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
 
-                String details = informationDetails.getDetails();
                 String date = informationDetails.getDate();
                 String title = informationDetails.getTitle();
+                String details = informationDetails.getDetails();
                 //Intent with passing data
                 Intent i = new Intent(context, UpdateInfo.class);
+                i.putExtra("dataDate", date);
                 i.putExtra("dataTitle", title);
                 i.putExtra("dataDetails", details);
-                i.putExtra("dataDate", date);
                 context.startActivity(i);
 
 
@@ -88,8 +88,8 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvDate = itemView.findViewById(R.id.tvDate);
-            tvDetails = itemView.findViewById(R.id.tvDetails);
             tvTitle = itemView.findViewById(R.id.tvTitle);
+            tvDetails = itemView.findViewById(R.id.tvDetails);
             btnKemasKini = itemView.findViewById(R.id.btnKemasKini);
             btnHapus = itemView.findViewById(R.id.btnHapus);
         }

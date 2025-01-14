@@ -33,9 +33,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#761515"
-            android:text="Local"
-
+            android:textSize="27dp"
+            android:text="+"
             android:textColor="@color/white"
+            android:onClick="info_page"
             android:textColorLink="@color/deep_red" />
 
         <Button
@@ -114,7 +115,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:background="@android:color/transparent"
-                android:onClick="info_page"
+                android:onClick="info_local"
                 app:icon="@drawable/info" />
 
             <View

@@ -23,7 +23,7 @@
             android:layout_height="64dp"
             style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
             app:icon="@drawable/back_icon"
-
+            android:contentDescription="Back button"
             android:background="@android:color/transparent"
             />
 
@@ -35,7 +35,7 @@
             android:inputType="date"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="32sp"
+            android:textSize="36sp"
             />
 
     </LinearLayout>
@@ -66,12 +66,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Date"
+                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="20sp"
                 android:hint="DD/MM/YY"
                 android:inputType="textPersonName" />
 
@@ -86,6 +88,7 @@
 
             <EditText
                 android:layout_width="match_parent"
+                android:textSize="20sp"
                 android:layout_height="wrap_content"
                 android:hint="Enter Title"
                 android:inputType="textCapCharacters" />
@@ -115,11 +118,11 @@
                 android:layout_height="wrap_content"
                 android:text="Information"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:hint="Enter Article/Details"
                 android:inputType="textCapCharacters" />
 
@@ -135,7 +138,7 @@
                 android:padding="1dp">
 
                 <Button
-                    android:id="@+id/check_in"
+                    android:id="@+id/simpan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Save"
@@ -152,7 +155,7 @@
                     />
 
                 <Button
-                    android:id="@+id/report"
+                    android:id="@+id/hantar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Submit"
