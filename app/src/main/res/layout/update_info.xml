@@ -61,7 +61,7 @@
                 android:text="Date"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="40sp"
                 />
 
             <EditText
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:hint="DD/MM/YY"
+                android:hint="23/03/2002"
                 android:inputType="textPersonName" />
 
 
@@ -87,7 +87,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter title"
+                android:hint="BANJIR KILAT"
                 android:textSize="20sp"
                 android:inputType="textCapCharacters" />
 
@@ -105,7 +105,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:hint="Enter article/information"
+                android:hint="SEMUA LEMBU TERKORBAN"
                 android:inputType="textCapCharacters" />
 
 

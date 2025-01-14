@@ -87,5 +87,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void update_info(View view) {
+        Intent intent = new Intent(this, UpdateInfo.class); // Correct target activity
+        startActivity(intent);
+    }
+
 
 }

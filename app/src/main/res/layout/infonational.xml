@@ -57,6 +57,7 @@
             android:layout_weight="1"
             android:backgroundTint="#761515"
             android:text="News"
+            android:onClick="info_news"
             android:textColor="@color/white"
             android:textColorLink="@color/deep_red" />
     </LinearLayout>
