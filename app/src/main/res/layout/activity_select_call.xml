@@ -14,6 +14,7 @@
         android:background="@color/Main_Background">
 
 
+
         <TextView
             android:id="@+id/titleText2"
             android:layout_width="wrap_content"
@@ -24,6 +25,16 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnAddD"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/my_button"
+            android:onClick="department"
+            app:icon="@drawable/add" />
 
         <!-- RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView

@@ -191,7 +191,7 @@
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_call_24"
                 android:contentDescription="Call button"
-                android:onClick="report_page"
+                android:onClick="call_page"
                 android:background="@android:color/transparent"
                 />
 
@@ -238,7 +238,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_person_24"
-                android:onClick="report_page"
+                android:onClick="personal_page"
                 android:contentDescription="Home button"
                 android:background="@android:color/transparent"
                 />

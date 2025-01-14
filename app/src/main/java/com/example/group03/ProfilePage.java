@@ -1,8 +1,10 @@
 package com.example.group03;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -57,6 +59,10 @@ public class ProfilePage extends AppCompatActivity {
         btnEditProfile.setOnClickListener(view -> saveUserProfile());
     }
 
+    public void editProfile(View view) {
+        Intent intent = new Intent(this, editProfile.class); // Correct target activity
+        startActivity(intent);
+    }
     private void loadUserProfile() {
         databaseReference.child("Password").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
