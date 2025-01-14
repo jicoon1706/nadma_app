@@ -47,9 +47,9 @@ public class infonational extends AppCompatActivity {
                     // Ensure the required fields are available
 
                     InformationDetails informationDetails = new InformationDetails();
-                    informationDetails.setTitle(data.child("Title:").getValue(String.class));
-                    informationDetails.setDate(data.child("Date:").getValue(String.class));
-                    informationDetails.setDetails(data.child("Details:").getValue(String.class));
+                    informationDetails.setTitle(data.child("Title").getValue(String.class));
+                    informationDetails.setDate(data.child("Date").getValue(String.class));
+                    informationDetails.setDetails(data.child("Details").getValue(String.class));
 
 
                     // Add the student to the list
@@ -68,7 +68,7 @@ public class infonational extends AppCompatActivity {
         });
 }
 
-    public void addinfo(View view) {
+    public void info_page(View view) {
         Intent intent = new Intent(this, addInfo.class); // Correct target activity
         startActivity(intent);
     }
@@ -81,4 +81,6 @@ public class infonational extends AppCompatActivity {
         Intent intent = new Intent(this, infonews.class); // Correct target activity
         startActivity(intent);
     }
+
+
 }
