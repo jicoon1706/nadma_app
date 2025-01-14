@@ -1,6 +1,8 @@
 package com.example.group03;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,12 @@ public class personalPage extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+    }
+
+    public void profile (View view) {
+        Intent intent = new Intent(this, ProfilePage.class); // Correct target activity
+        startActivity(intent);
     }
 }

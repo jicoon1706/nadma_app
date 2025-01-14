@@ -44,7 +44,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#761515"
-            android:text="Local"
+            android:text="+"
+            android:textSize="27dp"
             android:onClick="info_page"
             android:textColor="@color/white"
             android:textColorLink="@color/deep_red" />

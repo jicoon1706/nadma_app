@@ -102,4 +102,9 @@ public class editProfile extends AppCompatActivity {
             }
         });
     }
+
+    public void profile (View view) {
+        Intent intent = new Intent(this, ProfilePage.class); // Correct target activity
+        startActivity(intent);
+    }
 }
