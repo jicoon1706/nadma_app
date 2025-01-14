@@ -20,84 +20,16 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:elevation="10dp"
-            android:layout_marginBottom="5dp"
-            android:background="@color/white">
+            android:layout_height="match_parent"
+            android:layout_below="@id/titleText"
 
-            <!-- Container for three TextViews -->
-            <LinearLayout
-                android:id="@+id/leftTexts"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true">
+            android:padding="16dp"
+            tools:listitem="@layout/activity_info_layout" />
 
-                <!-- First TextView -->
-                <TextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Title"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
 
-                <!-- Second TextView -->
-                <TextView
-                    android:id="@+id/tvDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Date"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
-
-                <!-- Third TextView -->
-                <TextView
-                    android:id="@+id/tvDetails"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Information"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-            <!-- Container for two Buttons -->
-            <LinearLayout
-                android:id="@+id/rightButtons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true">
-
-                <!-- First Button (Update) -->
-
-                <!-- Second Button (Delete) -->
-                <Button
-                    android:id="@+id/btnKemasKini"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#2F5481"
-                    android:text="Update"
-                    android:textColor="@color/white" />
-
-                <Button
-                    android:id="@+id/btnHapus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Delete"
-                    android:backgroundTint="@color/header"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-        </RelativeLayout>
 
 
     </LinearLayout>

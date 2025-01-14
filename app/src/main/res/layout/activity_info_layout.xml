@@ -17,7 +17,7 @@
 
         <!-- First TextView -->
         <TextView
-            android:id="@+id/tvDisaster"
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
@@ -27,7 +27,7 @@
 
         <!-- Second TextView -->
         <TextView
-            android:id="@+id/tvArea"
+            android:id="@+id/tvDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -37,7 +37,7 @@
 
         <!-- Third TextView -->
         <TextView
-            android:id="@+id/tvSeverity"
+            android:id="@+id/tvDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

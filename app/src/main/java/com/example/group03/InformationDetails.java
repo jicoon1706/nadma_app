@@ -3,6 +3,7 @@ package com.example.group03;
 public class InformationDetails {
 
     String date, title, details;
+
     public InformationDetails(){
 
     }
