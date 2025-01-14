@@ -151,7 +151,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="97dp"
         android:layout_marginEnd="38dp"
-        app:srcCompat="@drawable/berita" />
+        app:srcCompat="@drawable/kebajikan" />
 
 
     <LinearLayout
@@ -170,7 +170,7 @@
             android:layout_marginBottom="12dp"
             android:background="@color/my_button"
             android:padding="5dp"
-            android:text="Laporan Terkini"
+            android:text=" NEWS"
             android:textAlignment="center"
             android:textColor="#FAF3F3"
             android:textSize="16sp" />
@@ -187,85 +187,22 @@
         android:layout_marginStart="0dp"
         android:layout_marginBottom="77dp">
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:elevation="10dp"
-            android:layout_marginBottom="5dp"
-            android:background="@color/white">
-
-            <!-- Container for three TextViews -->
-            <LinearLayout
-                android:id="@+id/leftTexts"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true">
-
-                <!-- First TextView -->
-                <TextView
-                    android:id="@+id/tvDisaster"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="BANJIR KILAT"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black" />
-
-                <!-- Second TextView -->
-                <TextView
-                    android:id="@+id/tvArea"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="23/03/2002"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
-
-                <!-- Third TextView -->
-                <TextView
-                    android:id="@+id/tvSeverity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="SEMUA LEMBU TERKORBAN"
-                    android:textSize="14sp"
-                    android:textColor="@color/black" />
-            </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="80dp"
+        app:srcCompat="@drawable/reminder" />
 
 
-            <!-- Container for two Buttons -->
-            <LinearLayout
-                android:id="@+id/rightButtons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true">
 
-                <!-- First Button (Update) -->
 
-                <!-- Second Button (Delete) -->
-                <Button
-                    android:id="@+id/btnKemasKini"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#2F5481"
-                    android:text="Update"
-                    android:onClick="update_info"
-                    android:textColor="@color/white" />
 
-                <Button
-                    android:id="@+id/btnHapus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Delete"
-                    android:backgroundTint="@color/header"
-                    android:textColor="@color/white" />
-            </LinearLayout>
+
+
         </RelativeLayout>
 
     </FrameLayout>
