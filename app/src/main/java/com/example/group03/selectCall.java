@@ -73,7 +73,7 @@ public class selectCall extends AppCompatActivity {
 
 
     }
-    public void department(View view) {
+    public void department_1(View view) {
         Intent intent = new Intent(this, addDepartment.class); // Correct target activity
         startActivity(intent);
     }

@@ -206,7 +206,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_add_24"
-                android:onClick="report_page"
+                android:onClick="call_page_1"
                 android:contentDescription="Add button"
                 android:background="@android:color/transparent"
                 />

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".addDepartment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -127,7 +127,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/home"
-                android:onClick="report_page"
+
                 android:background="@android:color/transparent"
                 />
 
@@ -142,7 +142,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_call_24"
-                android:onClick="addDepartment_page"
+
                 android:background="@android:color/transparent"
                 />
 
@@ -157,7 +157,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_add_24"
-                android:onClick="report_page"
+
                 android:background="@android:color/transparent"
                 />
 
@@ -172,7 +172,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/info"
-                android:onClick="report_page"
+
                 android:background="@android:color/transparent"
                 />
 
@@ -187,7 +187,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_person_24"
-                android:onClick="profilePage_page"
+
                 android:background="@android:color/transparent"
                 />
 

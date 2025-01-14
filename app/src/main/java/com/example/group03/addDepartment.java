@@ -36,17 +36,12 @@ public class addDepartment extends AppCompatActivity {
 
     String department, Id, address;
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_department);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
 
 
         btnView1.setOnClickListener(new View.OnClickListener() {
@@ -112,5 +107,10 @@ public class addDepartment extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void departmentControl_page(View view) {
+        Intent intent = new Intent(this, ProfilePage.class); // Correct target activity
+        startActivity(intent);
     }
 }

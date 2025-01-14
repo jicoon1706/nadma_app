@@ -87,12 +87,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void departmentControl_page(View view) {
-        Intent intent = new Intent(this, addDepartment.class); // Correct target activity
-        startActivity(intent);
-    }
 
-    public void call_page(View view) {
+
+    public void call_page_1(View view) {
         Intent intent = new Intent(this, selectCall.class); // Correct target activity
         startActivity(intent);
     }

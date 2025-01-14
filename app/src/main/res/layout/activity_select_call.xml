@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".MainActivity">
+    tools:context=".selectCall">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:layout_marginLeft="310dp"
             android:layout_marginTop="50dp"
             android:backgroundTint="@color/my_button"
-            android:onClick="department"
+            android:onClick="department_1"
             app:icon="@drawable/add" />
 
         <!-- RecyclerView -->
@@ -72,7 +72,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/home"
-                android:onClick="report_page"
+
                 android:background="@android:color/transparent"
                 />
 
@@ -87,7 +87,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_call_24"
-                android:onClick="addDepartment_page"
+
                 android:background="@android:color/transparent"
                 />
 
@@ -102,7 +102,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_add_24"
-                android:onClick="report_page"
+
                 android:background="@android:color/transparent"
                 />
 
@@ -117,7 +117,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/info"
-                android:onClick="report_page"
+
                 android:background="@android:color/transparent"
                 />
 
@@ -132,7 +132,7 @@
                 android:layout_height="64dp"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
                 app:icon="@drawable/baseline_person_24"
-                android:onClick="editProfile_page"
+
                 android:background="@android:color/transparent"
                 />
 
