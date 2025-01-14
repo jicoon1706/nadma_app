@@ -68,11 +68,22 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
             public void onClick(View v) {
                 //Dapatkan unique id ,then set to null
                 DatabaseReference dbRef = FirebaseDatabase.getInstance("https://group03-49e49-default-rtdb.firebaseio.com/").getReference("DepartmentInfo");
-                dbRef.child(departmentDetails.getDepartmentId()).setValue(null);
+                dbRef.child(departmentDetails.getDepartment()).setValue(null);
                 Toast.makeText(context, "Delete Successful", Toast.LENGTH_SHORT).show();
 
             }
         });
+
+        holder.btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an intent to call 911
+                Intent intent = new Intent(Intent.ACTION_DIAL); // ACTION_DIAL is used to open the dialer with the number pre-filled
+                intent.setData(android.net.Uri.parse("tel:911")); // The phone number to dial
+                context.startActivity(intent); // Start the dialer activity
+            }
+        });
+
 
 
 
@@ -86,7 +97,7 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView tvDepartment, tvDepartmentId, tvAddress;
-        Button btnUpdate, btnDelete;
+        Button btnUpdate, btnDelete, btnCall;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -95,12 +106,15 @@ public class DepartmentAdapter extends RecyclerView.Adapter<DepartmentAdapter.Vi
             tvAddress = itemView.findViewById(R.id.tvAddress);
             btnUpdate = itemView.findViewById(R.id.btnUpdate);
             btnDelete = itemView.findViewById(R.id.btnDelete);
+            btnCall = itemView.findViewById(R.id.btnCall);
         }
 
 
 
 
     }
+
+
 
 
 }

@@ -74,4 +74,9 @@ public class departmentControl extends AppCompatActivity {
         Intent intent = new Intent(this, addDepartment.class); // Correct target activity
         startActivity(intent);
     }
+
+    public void home_page(View view) {
+        Intent intent = new Intent(this, Homepage.class); // Correct target activity
+        startActivity(intent);
+    }
 }
