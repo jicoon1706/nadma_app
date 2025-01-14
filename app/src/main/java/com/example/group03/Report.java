@@ -43,6 +43,7 @@ public class Report extends AppCompatActivity implements SensorEventListener {
     private Vibrator vibrator;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,6 +143,11 @@ public class Report extends AppCompatActivity implements SensorEventListener {
 
     public void personal_page(View view) {
         Intent intent = new Intent(this, personalPage.class); // Correct target activity
+        startActivity(intent);
+    }
+
+    public void check_temperature(View view) {
+        Intent intent = new Intent(this, temperatureSensor.class); // Correct target activity
         startActivity(intent);
     }
 
